@@ -1,0 +1,32 @@
+body{
+    padding: 20px;
+    background-color: ghostwhite;
+}
+#movieList, #watchedList{
+    margin-top: 20px;
+}
+.movie-image{
+    width: 100px;
+    height: 100px;
+}
+.form-control:focus{
+    border: 3px solid #0d8611;
+    outline: none;
+    background-color: rgb(221, 224, 224);
+}
+#btnAddMovie:hover{
+   opacity: 1px;
+   background-color: #00DFA2;
+}   
+#btnWatched:active{
+    background-color: #0079FF;
+
+}
+#btnRemove:hover{
+    background-color: rgba(#FF0060, 0.1);
+
+}
+.table th {
+    justify-content: center;
+
+}
