@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"/>
-    
     <title>Movies</title>
 
     <style>
@@ -14,13 +13,11 @@
         }
         #movieList, #watchedList{
             margin-top: 20px;
-         
         }
         .movie-image{
             width: 100px;
             height: 100px;
         }
-    
     </style>
 </head>
 <body>
@@ -35,9 +32,9 @@
 
 <!--begin::Page Heading-->
 <div class="d-flex align-items-baseline flex-wrap mr-5">
-  
 <!--begin::Page Title-->
-<h5 class="text-dark font-weight-bold my-1 mr-5">FILM ARSIVIM</h5>
+<h5 class="text-dark font-weight-bold my-1 mr-5">
+FILM ARSIVIM              	            </h5>
 <!--end::Page Title-->
 </div>
 <!--end::Page Heading-->
@@ -62,7 +59,7 @@
 
 
 <!-- begin: Invoice body-->
-<div class="row justify-content-center py-8 px-8 py-md-10 px-md-0 ">
+<div class="row justify-content-center py-8 px-8 py-md-10 px-md-0">
 <div class="col-md-7">
 
     <div class="mb-3 mt-4">
@@ -75,14 +72,14 @@
         <input type="text" class="form-control" id="imageUrl">
     </div>
 
-    <button class="btn btn-success" id="btnAddMovie" onclick="addMovie()">Filmi Ekle</button>
+    <button class="btn btn-success" onclick="addMovie()">Filmi Ekle</button>
     
-    
-<div class="table-responsive"  id="movieList">
-<table class="table mb-5">
+
+<div class="table-responsive" id="movieList">
+<table class="table">
 <thead>
 <tr>
-<th class="font-weight-bold text-muted text-uppercase">Izlenecek Filmler</th>
+<th class="pl-0 font-weight-bold text-muted  text-uppercase">IZLENECEK FILMLER</th>
 <th class="px-8"></th>
 <th class="px-8"></th>
 <th class="px-8"></th>
@@ -113,9 +110,7 @@
     </thead>
     </table>
     </div>
-
 </div>
-
 </div>
 <!-- end: Invoice body-->
 
@@ -128,6 +123,7 @@
 </div>
 <!--end::Entry-->
 </div>
+
 <footer>
     <p class="mt-5">&copy;2024 Javascript Projesi</p>
 </footer>
@@ -170,7 +166,7 @@
 
             var buttons = document.createElement('div');
             buttons.innerHTML = 
-            `<button class= "btn btn-success me-2"  id="btnWatched"
+            `<button class= "btn btn-success me-2" id="btnWatched"
             onclick="watchedMovie(this)">İzlendi</button>
             <button class= "btn btn-danger me-2" id="btnRemove" onclick="removeMovie(this)">Kaldır</button>
             `;
@@ -220,6 +216,8 @@
             //ya da ---
             // var watchedMovieTitle = movieTitle.cloneNode(); //cloneNode(true) ile ayni degil mi?
             // listItem.appendChild(watchedMovieTitle);
+
+           
 
             listItem.innerHTML+= `<span>${emotion}</span>`;
 
