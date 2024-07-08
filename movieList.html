@@ -118,7 +118,7 @@
     <tr>
     <th class="pl-0 font-weight-bold text-muted  text-uppercase">IZLENEN FILMLER</th>
     <th class="d-flex justify-content-center font-weight-bold text-muted text-uppercase">FILM ADI</th>
-    <th class="text-right font-weight-bold text-muted text-uppercase">YORUM</th>
+    <th class="text-right text-muted text-uppercase">YORUM</th>
     <th class="text-right font-weight-bold text-muted text-uppercase">ISLEM</th>
     </tr>
     </thead>
@@ -201,6 +201,11 @@
             var watchedList = document.getElementById('watchedList');
 
             var emotion = prompt('Filmle alakalı görüşlerinizi yazınız:');
+            if(emotion.trim() === '')
+        {
+            alert('Lütfen bir yorum yaziniz.');
+            return;
+        }
 
             var movieContent = listItem.querySelector('.d-flex .align-items-center'); //querySelector metodu, belirtilen seçiciye uyan ilk elementi döner.
 
@@ -215,7 +220,7 @@
             listItem.innerHTML = '';
             listItem.appendChild(smallImage);
 
-            //ADDING FILM TITLE       
+            //ADDING MOVIE TITLE       
             var watchedMovieTitle = movieTitle.cloneNode(true); // reached children(descendants)
            //watchedMovieTitle.className= 'movie-title'
             listItem.appendChild(watchedMovieTitle);
@@ -224,7 +229,10 @@
            //watchedMovieTitle.textContent = movieTitle.textContent; // It copies content manually
            //listItem.appendChild(watchedMovieTitle);
 
+
             listItem.innerHTML+= `<span>${emotion}</span>`;
+
+       
 
             var removeButton = document.createElement('div');
             removeButton.innerHTML = 
